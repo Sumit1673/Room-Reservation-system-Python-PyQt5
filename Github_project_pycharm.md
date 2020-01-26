@@ -20,7 +20,7 @@
 # To add any file to Github repo of 
 1. Right Click on the new file --> Git --> Add.
 2. Right Click on the new file --> Git --> Commit file. Add Comments and commit. 
-3. Right Click on the new file --> Git --> Push.
+3. Right Click on the new file --> Git --> Repository --> Push.
 
 # To download any file from the other branch.
 1. Open terminal in pycharm. 
