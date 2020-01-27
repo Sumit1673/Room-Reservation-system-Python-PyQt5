@@ -12,7 +12,7 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QFrame, QLabel, QComboBo
 class Login(QMainWindow):
     def __init__(self, parent=None):
         super(Login, self).__init__(parent)
-        
+        self.flag = 0
         self.setWindowTitle("Login Page")
         self.setWindowIcon(QIcon("icono.png"))
         self.setWindowFlags(Qt.WindowCloseButtonHint | Qt.MSWindowsFixedSizeDialogHint)
@@ -21,7 +21,7 @@ class Login(QMainWindow):
         paleta = QPalette()
         paleta.setColor(QPalette.Background, QColor(200,200,200))
         self.setPalette(paleta)
-
+        self.user_credential = {'Sumit': '12345', 'Yibo':'11111'}
         self.initUI()
 
     def initUI(self):
@@ -71,7 +71,7 @@ class Login(QMainWindow):
 
         self.cmbo_box_user_type = QComboBox(self)
         self.cmbo_box_user_type.addItems(["Login", "Register"])
-        self.cmbo_box_user_type.setCurrentIndex(-1)
+        self.cmbo_box_user_type.setCurrentIndex(0)
         self.cmbo_box_user_type.setFixedWidth(280)
         self.cmbo_box_user_type.setFixedHeight(26)
         self.cmbo_box_user_type.move(60, 136)
@@ -121,19 +121,36 @@ class Login(QMainWindow):
 
 # ================== WIDGETS QPUSHBUTTON ===================
 
-        buttonLogin = QPushButton("Submit", self)
-        buttonLogin.setFixedWidth(135)
-        buttonLogin.setFixedHeight(28)
-        buttonLogin.move(60, 286)
+        btn_submit = QPushButton("Submit", self)
+        btn_submit.setFixedWidth(135)
+        btn_submit.setFixedHeight(28)
+        btn_submit.move(60, 286)
 
         butn_cancel = QPushButton("Cancel", self)
         butn_cancel.setFixedWidth(135)
         butn_cancel.setFixedHeight(28)
         butn_cancel.move(205, 286)
 
-        # buttonLogin.clicked.connect(self.Login)
+        btn_submit.clicked.connect(self.check_submission)
+        # if flag:
+
         # butn_cancel.clicked.connect(self.close)
 
+    def check_submission(self):
+        self.flag = 0
+        user_type = str(self.cmbo_box_user_type.currentText())
+        user_inp = str(self.line_edit_username.text())
+        user_paswd  = str(self.line_edit_pswd.text())
+        if user_type == "Login":
+            if user_inp in self.user_credential.keys():
+                if user_paswd == self.user_credential[user_inp]:
+                    self.flag = 1
+                    print("Login Successfull")
+        if user_type is "Register":
+            if user_inp is not self.user_credential:
+                self.user_credential[user_inp] = user_paswd
+            else:
+                print("user name already exists... !! ")
 
 # ================================================================
 
@@ -141,15 +158,15 @@ if __name__ == '__main__':
     
     import sys
     
-    aplicacion = QApplication(sys.argv)
+    application = QApplication(sys.argv)
 
-    fuente = QFont()
-    fuente.setPointSize(10)
-    fuente.setFamily("Bahnschrift Light")
+    font_ = QFont()
+    font_.setPointSize(10)
+    font_.setFamily("Bahnschrift Light")
 
-    aplicacion.setFont(fuente)
+    application.setFont(font_)
     
-    ventana = Login()
-    ventana.show()
+    myapp = Login()
+    myapp.show()
     
-    sys.exit(aplicacion.exec_())
+    sys.exit(application.exec_())
