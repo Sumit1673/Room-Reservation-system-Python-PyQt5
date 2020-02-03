@@ -21,7 +21,7 @@ class Login(QMainWindow):
         paleta = QPalette()
         paleta.setColor(QPalette.Background, QColor(200,200,200))
         self.setPalette(paleta)
-        self.user_credential = {'Sumit': '12345', 'Yibo':'11111'}
+        self.user_credential = {'Sumit': '12345', 'Yibo': '11111'}
         self.initUI()
 
     def initUI(self):
@@ -75,6 +75,19 @@ class Login(QMainWindow):
         self.cmbo_box_user_type.setFixedWidth(280)
         self.cmbo_box_user_type.setFixedHeight(26)
         self.cmbo_box_user_type.move(60, 136)
+
+        self.cmbo_box_user_type.currentIndexChanged['QString'].connect(self.change_window_size())
+
+            # label_username = QLabel("First Name", self)
+            # label_username.move(60, 170)
+            #
+            # frame_username = QFrame(self)
+            # frame_username.setFrameShape(QFrame.StyledPanel)
+            # frame_username.setFixedWidth(280)
+            # frame_username.setFixedHeight(28)
+            # frame_username.move(60, 196)
+
+
 
         label_username = QLabel("Username", self)
         label_username.move(60, 170)
@@ -152,6 +165,9 @@ class Login(QMainWindow):
             else:
                 print("user name already exists... !! ")
 
+    def change_window_size(self):
+        if str(self.cmbo_box_user_type.currentText()) == "Register":
+            self.setFixedSize(400, 500)
 # ================================================================
 
 if __name__ == '__main__':
