@@ -4,11 +4,14 @@ __versión__ = "1.0"
 
 from PyQt5.QtGui import QIcon, QPalette, QColor, QPixmap, QFont
 from PyQt5.QtCore import Qt
+from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QFrame, QLabel, QComboBox, QLineEdit,
-                             QPushButton)
-from booking_interface import BookingInterface
+                             QPushButton, QMessageBox)
+
 
 class Login(QMainWindow):
+    switch_window = QtCore.pyqtSignal()
+
     def __init__(self, parent=None):
         super(Login, self).__init__(parent)
         self.flag = 0
@@ -31,14 +34,17 @@ class Login(QMainWindow):
         self.label_pswd = QLabel("Password", self)
         self.edit_full_name = QLineEdit(self.frame_full_name)
         self.edit_email = QLineEdit(self.frame_email)
-
+        self.frame_pswd = QFrame(self)
         self.line_edit_username = QLineEdit(self.frame_username)
         self.lbl_full_name = QLabel("Full Name", self)
         self.lbl_email = QLabel("Email", self)
+        self.line_edit_pswd = QLineEdit(self.frame_pswd)
 
         self.btn_submit = QPushButton("Submit", self)
+        # self.btn_submit.clicked.connect(self.check_submission)
         self.btn_cancel = QPushButton("Cancel", self)
-        self.frame_pswd = QFrame(self)
+        self.btn_cancel.clicked.connect(self.close)
+        self.line_edit_pswd.setFrame(False)
         self.app_header()
         self.create_forms()
 
@@ -92,10 +98,9 @@ class Login(QMainWindow):
         self.cmbo_box_user_type.setFixedHeight(26)
         self.cmbo_box_user_type.move(60, 136)
         self.cmbo_box_user_type.currentIndexChanged.connect(self.on_combobox_togl)
+        # self.btn_submit.clicked.connect(self.check_submission)
 
     def registration_form(self):
-
-        print("Registeration")
         self.frame_email.show()
         self.frame_full_name.show()
         self.lbl_email.show()
@@ -124,6 +129,10 @@ class Login(QMainWindow):
         self.frame_email.setFixedHeight(28)
         self.lbl_email.move(60, 224)
         self.frame_email.move(60, 250)
+        image_email = QLabel(self.frame_email)
+        image_email.setPixmap(QPixmap("email.png").scaled(20, 20, Qt.KeepAspectRatio,
+                                                                Qt.SmoothTransformation))
+        image_email.move(10, 4)
         self.edit_email.setFrame(False)
         self.edit_email.setTextMargins(8, 0, 4, 1)
         self.edit_email.setFixedWidth(238)
@@ -139,11 +148,14 @@ class Login(QMainWindow):
 
         self.btn_submit.move(60, 380)
         self.btn_cancel.move(205, 380)
+        # self.btn_submit.clicked.connect(self.check_submission)
 
     def on_combobox_togl(self, index):
         if index == 1:
+            print("Registration")
             self.registration_form()
         else:
+            print("Login")
             self.login_form()
 
     def login_form(self):
@@ -180,16 +192,11 @@ class Login(QMainWindow):
                                                           Qt.SmoothTransformation))
         img_pswd.move(10, 4)
 
-        self.line_edit_pswd = QLineEdit(self.frame_pswd)
-        self.line_edit_pswd.setFrame(False)
         self.line_edit_pswd.setEchoMode(QLineEdit.Password)
         self.line_edit_pswd.setTextMargins(8, 0, 4, 1)
         self.line_edit_pswd.setFixedWidth(238)
         self.line_edit_pswd.setFixedHeight(26)
         self.line_edit_pswd.move(40, 1)
-
-        # ================== WIDGETS QPUSHBUTTON ===================
-
 
         self.btn_submit.setFixedWidth(135)
         self.btn_submit.setFixedHeight(28)
@@ -199,32 +206,45 @@ class Login(QMainWindow):
         self.btn_cancel.setFixedHeight(28)
         self.btn_cancel.move(205, 286)
 
-        self.btn_submit.clicked.connect(self.check_submission)
-        # if flag:
+    def get_login_details(self):
+        username = str(self.line_edit_username.text())
+        password  = str(self.line_edit_pswd.text())
+        return [username, password]
 
-        # butn_cancel.clicked.connect(self.close)
-    def check_submission(self):
-        self.flag = 0
-        user_type = str(self.cmbo_box_user_type.currentText())
-        user_inp = str(self.line_edit_username.text())
-        user_paswd  = str(self.line_edit_pswd.text())
-        if user_type == "Login":
-            if user_inp in self.user_credential.keys():
-                if user_paswd == self.user_credential[user_inp]:
-                    self.flag = 1
-                    print("Login Successfull")
-                    book = BookingInterface()
-                    book.show()
+    def check_user_type(self):
+        return str(self.cmbo_box_user_type.currentText())
 
-        if user_type is "Register":
-            if user_inp is not self.user_credential:
-                self.user_credential[user_inp] = user_paswd
-            else:
-                print("user name already exists... !! ")
+    def get_register_details(self):
+        email = str(self.edit_email.text())
+        full_name = str(self.edit_full_name.text())
+        password = str(self.line_edit_pswd.text())
+        username = str(self.line_edit_username.text())
+        return [username, password, email, full_name]
 
-    def change_window_size(self):
-        if str(self.cmbo_box_user_type.currentText()) == "Register":
-            self.setFixedSize(400, 500)
+    def display_msg(self, title: str, msg: str):
+        QMessageBox.about(self, title, msg)
+    # def check_submission(self):
+    #     print("Validating User")
+    #     self.flag = 0
+    #     user_type = str(self.cmbo_box_user_type.currentText())
+    #     user_inp = str(self.line_edit_username.text())
+    #     user_paswd  = str(self.line_edit_pswd.text())
+    #     if user_type == "Login":
+    #         if user_inp in self.user_credential.keys():
+    #             if user_paswd == self.user_credential[user_inp]:
+    #                 self.flag = 1
+    #                 print("Login Successfull")
+    #                 self.switch_window.emit()
+    #                 return user_type, self.line_edit_pswd, self.line_edit_username
+    #
+    #     if user_type is "Register":
+    #         # if user_inp is not self.user_credential:
+    #         #     self.user_credential[user_inp] = user_paswd
+    #         # else:
+    #         #     print("user name already exists... !! ")
+    #         return user_type, self.edit_email, \
+    #                self.edit_full_name, self.line_edit_pswd,\
+    #                self.line_edit_username
 
 
 if __name__ == '__main__':
@@ -240,7 +260,7 @@ if __name__ == '__main__':
     application.setFont(font_)
     
     myapp = Login()
-    
+
     myapp.show()
     
     sys.exit(application.exec_())

@@ -14,11 +14,10 @@ class UserAccount:
         self.user_data = None
 
     def __repr__(self):
-        pass
+        return "UserAccount <class> to validate and store user details"
 
-    def validation(self, username, password):
+    def validation(self, username: str, password: str):
         found = False
-
         for users in self.load_database():
 
             found = [True if username == users['username'] and password == users['password'] else False]
@@ -64,5 +63,6 @@ class UserAccount:
 
 if '__main__' == __name__:
     u = UserAccount()
-    u.register_user(full_name='Jason', email="json.stathom@gmail.com",
-                    username="Jason11", password="Iamexpendable")
+    print(u)
+    # u.register_user(full_name='Jason', email="json.stathom@gmail.com",
+    #                 username="Jason11", password="Iamexpendable")
