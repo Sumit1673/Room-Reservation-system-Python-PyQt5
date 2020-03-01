@@ -24,7 +24,6 @@ class Login(QMainWindow):
         paleta = QPalette()
         paleta.setColor(QPalette.Background, QColor(200,200,200))
         self.setPalette(paleta)
-        self.user_credential = {'Sumit': '12345', 'Yibo': '11111'}
         self.frame_username = QFrame(self)
         self.frame_full_name = QFrame(self)
         self.frame_email = QFrame(self)
@@ -223,28 +222,6 @@ class Login(QMainWindow):
 
     def display_msg(self, title: str, msg: str):
         QMessageBox.about(self, title, msg)
-    # def check_submission(self):
-    #     print("Validating User")
-    #     self.flag = 0
-    #     user_type = str(self.cmbo_box_user_type.currentText())
-    #     user_inp = str(self.line_edit_username.text())
-    #     user_paswd  = str(self.line_edit_pswd.text())
-    #     if user_type == "Login":
-    #         if user_inp in self.user_credential.keys():
-    #             if user_paswd == self.user_credential[user_inp]:
-    #                 self.flag = 1
-    #                 print("Login Successfull")
-    #                 self.switch_window.emit()
-    #                 return user_type, self.line_edit_pswd, self.line_edit_username
-    #
-    #     if user_type is "Register":
-    #         # if user_inp is not self.user_credential:
-    #         #     self.user_credential[user_inp] = user_paswd
-    #         # else:
-    #         #     print("user name already exists... !! ")
-    #         return user_type, self.edit_email, \
-    #                self.edit_full_name, self.line_edit_pswd,\
-    #                self.line_edit_username
 
 
 if __name__ == '__main__':

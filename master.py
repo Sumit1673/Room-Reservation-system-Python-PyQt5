@@ -1,9 +1,4 @@
-from PyQt5.QtGui import QIcon, QPalette, QColor, QPixmap, QFont
-from PyQt5.QtCore import Qt
-from PyQt5 import QtCore, QtWidgets
-
-from PyQt5.QtWidgets import (QApplication, QMainWindow, QFrame, QLabel, QComboBox, QLineEdit,
-                             QPushButton)
+from PyQt5 import QtWidgets
 from login import Login
 from booking_interface import BookingPage
 from user_account import UserAccount
@@ -15,9 +10,12 @@ class Controller:
         self.login_page = Login()
         self.booking_page = BookingPage()
         self.database = UserAccount()
+        self.login_page.switch_window.connect(self.show_booking)
+        self.login_page.show()
+        self.login_page.btn_submit.clicked.connect(self.check_submission)
 
     def __repr__(self):
-        return "Controller Class"
+        return "Controller <class>"
 
     def show_login(self):
 
@@ -62,7 +60,7 @@ def main():
     import sys
     app = QtWidgets.QApplication(sys.argv)
     controller = Controller()
-    controller.show_login()
+    # controller.show_login()
     sys.exit(app.exec_())
 
 
