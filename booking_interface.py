@@ -13,14 +13,18 @@ class BookingPage(QMainWindow):
         super().__init__()
         # self.setWindowTitle('Book Hotels ')
         self.ui = uic.loadUi("interface1.ui", self)
-        self.ui.search_hotel = QtCore.QStringListModel(self)
+        self.pb_availability.setStyleSheet("background-color: green")
+        self.ui.cal_check_in.clicked[QtCore.QDate].connect(self.showDate)
+        self.ui.cal_check_in.clicked[QtCore.QDate].connect(self.showDate)
+        self.init_ui()
+
+    def init_ui(self):
+
         all_data = self.get_hotel_database()
         if all_data is not None:
             self.display_country(all_data[0])
             self.display_city(all_data[1])
             self.display_hotel(all_data[2])
-
-        # self.create_search_hotel()
 
     def display_hotel(self, hotel_list):
         completer = QCompleter(hotel_list)
@@ -37,8 +41,10 @@ class BookingPage(QMainWindow):
         completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.ui.ledit_country.setCompleter(completer)
 
+
     def select_check_in_out(self):
         pass
+
     def check_availiability(self):
         pass
 

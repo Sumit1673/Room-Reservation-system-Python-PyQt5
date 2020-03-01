@@ -42,7 +42,7 @@
      <string>Country</string>
     </property>
    </widget>
-   <widget class="QCalendarWidget" name="calendarWidget">
+   <widget class="QCalendarWidget" name="cal_check_in">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -55,7 +55,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QCalendarWidget" name="calendarWidget_2">
+   <widget class="QCalendarWidget" name="cal_check_out">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -114,7 +114,7 @@
      <string>Check Out :</string>
     </property>
    </widget>
-   <widget class="QDateEdit" name="check_out">
+   <widget class="QDateEdit" name="date_edit_check_in_2">
     <property name="geometry">
      <rect>
       <x>630</x>
@@ -235,7 +235,7 @@
      <string>View Availability</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="available_pushbutton">
+   <widget class="QPushButton" name="pb_availability">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -256,7 +256,7 @@
      <string>Availability</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="roomprice_pushbutton">
+   <widget class="QPushButton" name="pb_choose_hotel">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -274,10 +274,10 @@
      </font>
     </property>
     <property name="text">
-     <string>Room Prices</string>
+     <string>Choose Hotel</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="booking_pushbutton">
+   <widget class="QPushButton" name="pb_confirm_booking">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -295,10 +295,10 @@
      </font>
     </property>
     <property name="text">
-     <string>Booking Details</string>
+     <string>Confirm Booking</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="payment_pushbutton">
+   <widget class="QPushButton" name="pb_payement">
     <property name="geometry">
      <rect>
       <x>770</x>
@@ -358,7 +358,7 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QDateEdit" name="checkin_dateedit">
+   <widget class="QDateEdit" name="date_edit_check_in">
     <property name="geometry">
      <rect>
       <x>260</x>
