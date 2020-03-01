@@ -12,10 +12,11 @@ class BookingPage(QMainWindow):
     def __init__(self):
         super().__init__()
         # self.setWindowTitle('Book Hotels ')
+        self.setWindowFlags(QtCore.Qt.WindowCloseButtonHint)
         self.ui = uic.loadUi("interface1.ui", self)
         self.pb_availability.setStyleSheet("background-color: green")
-        self.ui.cal_check_in.clicked[QtCore.QDate].connect(self.showDate)
-        self.ui.cal_check_in.clicked[QtCore.QDate].connect(self.showDate)
+        # self.ui.cal_check_in.clicked[QtCore.QDate].connect(self.showDate)
+        # self.ui.cal_check_in.clicked[QtCore.QDate].connect(self.showDate)
         self.init_ui()
 
     def init_ui(self):

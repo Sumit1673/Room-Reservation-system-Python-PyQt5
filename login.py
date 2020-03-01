@@ -15,6 +15,7 @@ class Login(QMainWindow):
     def __init__(self, parent=None):
         super(Login, self).__init__(parent)
         self.flag = 0
+
         self.setWindowTitle("Login Page")
         self.setWindowIcon(QIcon("icono.png"))
         self.setWindowFlags(Qt.WindowCloseButtonHint | Qt.MSWindowsFixedSizeDialogHint)
