@@ -26,6 +26,7 @@ class BookingPage(QMainWindow):
             self.display_country(all_data[0])
             self.display_city(all_data[1])
             self.display_hotel(all_data[2])
+            self.display_room_type(all_data[3])
 
     def display_hotel(self, hotel_list):
         completer = QCompleter(hotel_list)
@@ -42,6 +43,9 @@ class BookingPage(QMainWindow):
         completer.setCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.ui.ledit_country.setCompleter(completer)
 
+    def display_room_type(self, room_type):
+        self.ui.cmbox_room_type.addItems(room_type)
+        self.ui.cmbox_room_type.setCurrentIndex(0)
 
     def select_check_in_out(self):
         pass
@@ -51,15 +55,16 @@ class BookingPage(QMainWindow):
 
     def get_hotel_database(self, col=None):
         try:
-            hotel_df = pd.read_csv("city_hotel_database.csv")
+            hotel_df = pd.read_csv("city_hotel_database.csv").dropna()
             hotel_database = []
             if col is None:
                 for each_col in hotel_df.columns:
-                    if each_col == "Country" or "City" or "hotel_names":
+                    if each_col == "Country" or "City" or "hotel_names" or "room_type":
                         hotel_database.append(set(hotel_df[each_col]))
                     else:
                         hotel_database.append(hotel_df[each_col])
                 return hotel_database
+            # use the elif separately to get a data
             elif col in hotel_df.columns:
                 return hotel_df[col]
             else:
