@@ -43,10 +43,6 @@ New_central = hotel('The Central Park', 'New York', datetime.date(2020, 7, 25), 
 my_list = [Montreal_jw, Montreal_jam, Toronto_itc, Toronto_noel, Van_ramada, Van_hampton, Que_royal, Que_univ, New_tree,
            New_central]
 
-
-
-
-
 class BookingPage(QMainWindow):
     switch_window = QtCore.pyqtSignal(str)
 
@@ -55,10 +51,19 @@ class BookingPage(QMainWindow):
         # self.setWindowTitle('Book Hotels ')
         self.setWindowFlags(QtCore.Qt.WindowCloseButtonHint)
         self.ui = uic.loadUi("interface1.ui", self)
-        self.pb_availability.setStyleSheet("background-color: green")
+        self.ui.pb_availability.setStyleSheet("background-color: green")
         # self.ui.cal_check_in.clicked[QtCore.QDate].connect(self.showDate)
         # self.ui.cal_check_in.clicked[QtCore.QDate].connect(self.showDate)
-        self.ui.view_availability.clicked.connect(lambda: check_availiability(self.ui.ledit_city_name(), self.ui.ledit_hotel()))
+
+        ########## THis to be used when you update your gui from my gui
+        # self.ui.view_availability.clicked.connect(
+        #     lambda: self.check_availability(self.ui.ledit_city_name.text(),
+        #                                     self.ui.ledit_hotel.text()))
+
+        ########## Example
+        self.ui.view_availability.clicked.connect(
+            lambda: self.check_availability("Montreal","Radison"))
+        #
         self.init_ui()
 
     def init_ui(self):
@@ -92,7 +97,8 @@ class BookingPage(QMainWindow):
     def select_check_in_out(self):
         pass
 
-    def check_availiability(fname, fcity):
+    # @staticmethod
+    def check_availability(self, fname, fcity):
         print('test')
             # for x in my_list:
             #     if fcity == x.name():
