@@ -56,7 +56,7 @@ class MainWindow(QMainWindow):
             if not pixmap.isNull():
                 label = QtWidgets.QLabel(pixmap=pixmap)
                 lay.addWidget(label)
-
+#just a comment
 if __name__ == '__main__':
     import sys
     app = QApplication(sys.argv)
