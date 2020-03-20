@@ -1,132 +1,131 @@
-country,city,hotel_names,room_type,room_availability
-Canada,Montreal,JW Marriott,Single,4,
-Canada,Montreal,JW Marriott,Double,1
-Canada,Montreal,JW Marriott,Quad,3
-Canada,Montreal,JW Marriott,King,4
-Canada,Montreal,JW Marriott,Studio,3
-Canada,Montreal,Jameson,Single,5
-Canada,Montreal,Jameson,Double,0
-Canada,Montreal,Jameson,Quad,1
-Canada,Montreal,Jameson,King,6
-Canada,Montreal,Jameson,Studio,4
-Canada,Montreal,Radisson Blu,Single,3
-Canada,Montreal,Radisson Blu,Double,2
-Canada,Montreal,Radisson Blu,Quad,6
-Canada,Montreal,Radisson Blu,King,1
-Canada,Montreal,Radisson Blu,Studio,1
-Canada,Montreal,The Jack Daniel,Single,0
-Canada,Montreal,The Jack Daniel,Double,4
-Canada,Montreal,The Jack Daniel,Quad,1
-Canada,Montreal,The Jack Daniel,King,1
-Canada,Montreal,The Jack Daniel,Studio,3
-Canada,Montreal,Le Meridien,Single,6
-Canada,Montreal,Le Meridien,Double,1
-Canada,Montreal,Le Meridien,Quad,3
-Canada,Montreal,Le Meridien,King,2
-Canada,Montreal,Le Meridien,Studio,1
-Canada,Toronto,ITC,Single,4
-Canada,Toronto,ITC,Double,3
-Canada,Toronto,ITC,Quad,5
-Canada,Toronto,ITC,King,7
-Canada,Toronto,ITC,Studio,6
-Canada,Toronto,The Manor,Single,4
-Canada,Toronto,The Manor,Double,1
-Canada,Toronto,The Manor,Quad,2
-Canada,Toronto,The Manor,King,1
-Canada,Toronto,The Manor,Studio,1
-Canada,Toronto,Radisson Blu,Single,3
-Canada,Toronto,Radisson Blu,Double,6
-Canada,Toronto,Radisson Blu,Quad,1
-Canada,Toronto,Radisson Blu,King,2
-Canada,Toronto,Radisson Blu,Studio,4
-Canada,Toronto,West Queen,Single,7
-Canada,Toronto,West Queen,Double,5
-Canada,Toronto,West Queen,Quad,3
-Canada,Toronto,West Queen,King,1
-Canada,Toronto,West Queen,Studio,2
-Canada,Toronto,Intercontinental,Single,1
-Canada,Toronto,Intercontinental,Double,2
-Canada,Toronto,Intercontinental,Quad,2
-Canada,Toronto,Intercontinental,King,3
-Canada,Toronto,Intercontinental,Studio,1
-Canada,Toronto,Noel,Single,4
-Canada,Toronto,Noel,Double,5
-Canada,Toronto,Noel,Quad,1
-Canada,Toronto,Noel,King,2
-Canada,Toronto,Noel,Studio,1
-Canada,Vancouver,Riviera,Single,3
-Canada,Vancouver,Riviera,Double,3
-Canada,Vancouver,Riviera,Quad,2
-Canada,Vancouver,Riviera,King,4
-Canada,Vancouver,Riviera,Studio,1
-Canada,Vancouver,Ramada,Single,4
-Canada,Vancouver,Ramada,Double,1
-Canada,Vancouver,Ramada,Quad,4
-Canada,Vancouver,Ramada,King,2
-Canada,Vancouver,Ramada,Studio,2
-Canada,Vancouver,Patricia,Single,6
-Canada,Vancouver,Patricia,Double,5
-Canada,Vancouver,Patricia,Quad,3
-Canada,Vancouver,Patricia,King,4
-Canada,Vancouver,Patricia,Studio,4
-Canada,Vancouver,Hampton Inn,Single,1
-Canada,Vancouver,Hampton Inn,Double,2
-Canada,Vancouver,Hampton Inn,Quad,1
-Canada,Vancouver,Hampton Inn,King,3
-Canada,Vancouver,Hampton Inn,Studio,4
-Canada,Vancouver,Pan Pacific,Single,1
-Canada,Vancouver,Pan Pacific,Double,2
-Canada,Vancouver,Pan Pacific,Quad,1
-Canada,Vancouver,Pan Pacific,King,2
-Canada,Vancouver,Pan Pacific,Studio,2
-Canada,Vancouver,Pan Pacific,,
-Canada,Quebec City,Hotel Royal William,Single,1
-Canada,Quebec City,Hotel Royal William,Double,2
-Canada,Quebec City,Hotel Royal William,Quad,1
-Canada,Quebec City,Hotel Royal William,King,2
-Canada,Quebec City,Hotel Royal William,Studio,3
-Canada,Quebec City,Hotel Le Concorde,Single,3
-Canada,Quebec City,Hotel Le Concorde,Double,2
-Canada,Quebec City,Hotel Le Concorde,Quad,3
-Canada,Quebec City,Hotel Le Concorde,King,1
-Canada,Quebec City,Hotel Le Concorde,Studio,1
-Canada,Quebec City,Hotel Palace Royal,Single,3
-Canada,Quebec City,Hotel Palace Royal,Double,3
-Canada,Quebec City,Hotel Palace Royal,Quad,3
-Canada,Quebec City,Hotel Palace Royal,King,2
-Canada,Quebec City,Hotel Palace Royal,Studio,3
-Canada,Quebec City,Hotel Universal,Single,4
-Canada,Quebec City,Hotel Universal,Double,4
-Canada,Quebec City,Hotel Universal,Quad,3
-Canada,Quebec City,Hotel Universal,King,3
-Canada,Quebec City,Hotel Universal,Studio,3
-USA,New York,Double Tree,Single,4
-USA,New York,Double Tree,Double,1
-USA,New York,Double Tree,Quad,4
-USA,New York,Double Tree,King,3
-USA,New York,Double Tree,Studio,5
-USA,New York,Courtyard,Single,3
-USA,New York,Courtyard,Double,2
-USA,New York,Courtyard,Quad,3
-USA,New York,Courtyard,King,6
-USA,New York,Courtyard,Studio,4
-USA,New York,Holiday Inn,Single,2
-USA,New York,Holiday Inn,Double,2
-USA,New York,Holiday Inn,Quad,2
-USA,New York,Holiday Inn,King,2
-USA,New York,Holiday Inn,Studio,3
-USA,New York,The Central Park,Single,2
-USA,New York,The Central Park,Double,1
-USA,New York,The Central Park,Quad,1
-USA,New York,The Central Park,King,1
-USA,New York,The Central Park,Studio,1
-USA,New York,Corwne Plaza,Single,6
-USA,New York,Corwne Plaza,Double,6
-USA,New York,Corwne Plaza,Quad,1
-USA,New York,Corwne Plaza,King,2
-USA,New York,Corwne Plaza,Studio,3
-USA,New York,Sheraton,Single,3
-USA,New York,Sheraton,Double,3
-USA,New York,Sheraton,Quad,2
-USA,New York,Sheraton,King,4
-USA,New York,Sheraton,Studio,1
+country,city,hotel_names,room_type,room_availability,Price(Per Room Per Night)
+Canada,Montreal,JW Marriott,Single,4,129
+Canada,Montreal,JW Marriott,Double,1,139
+Canada,Montreal,JW Marriott,Quad,3,144
+Canada,Montreal,JW Marriott,King,4,159
+Canada,Montreal,JW Marriott,Studio,3,119
+Canada,Montreal,Jameson,Single,5,89
+Canada,Montreal,Jameson,Double,0,99
+Canada,Montreal,Jameson,Quad,1,108
+Canada,Montreal,Jameson,King,6,112
+Canada,Montreal,Jameson,Studio,4,80
+Canada,Montreal,Radisson Blu,Single,3,89
+Canada,Montreal,Radisson Blu,Double,2,96
+Canada,Montreal,Radisson Blu,Quad,6,104
+Canada,Montreal,Radisson Blu,King,1,118
+Canada,Montreal,Radisson Blu,Studio,1,85
+Canada,Montreal,The Jack Daniel,Single,0,119
+Canada,Montreal,The Jack Daniel,Double,4,129
+Canada,Montreal,The Jack Daniel,Quad,1,149
+Canada,Montreal,The Jack Daniel,King,1,159
+Canada,Montreal,The Jack Daniel,Studio,3,108
+Canada,Montreal,Le Meridien,Single,6,108
+Canada,Montreal,Le Meridien,Double,1,114
+Canada,Montreal,Le Meridien,Quad,3,132
+Canada,Montreal,Le Meridien,King,2,164
+Canada,Montreal,Le Meridien,Studio,1,122
+Canada,Toronto,ITC,Single,4,148
+Canada,Toronto,ITC,Double,3,159
+Canada,Toronto,ITC,Quad,5,174
+Canada,Toronto,ITC,King,7,192
+Canada,Toronto,ITC,Studio,6,132
+Canada,Toronto,The Manor,Single,4,134
+Canada,Toronto,The Manor,Double,1,146
+Canada,Toronto,The Manor,Quad,2,157
+Canada,Toronto,The Manor,King,1,184
+Canada,Toronto,The Manor,Studio,1,112
+Canada,Toronto,Radisson Blu,Single,3,124
+Canada,Toronto,Radisson Blu,Double,6,141
+Canada,Toronto,Radisson Blu,Quad,1,159
+Canada,Toronto,Radisson Blu,King,2,184
+Canada,Toronto,Radisson Blu,Studio,4,114
+Canada,Toronto,West Queen,Single,7,108
+Canada,Toronto,West Queen,Double,5,129
+Canada,Toronto,West Queen,Quad,3,144
+Canada,Toronto,West Queen,King,1,165
+Canada,Toronto,West Queen,Studio,2,101
+Canada,Toronto,Intercontinental,Single,1,129
+Canada,Toronto,Intercontinental,Double,2,148
+Canada,Toronto,Intercontinental,Quad,2,169
+Canada,Toronto,Intercontinental,King,3,221
+Canada,Toronto,Intercontinental,Studio,1,109
+Canada,Toronto,Noel,Single,4,159
+Canada,Toronto,Noel,Double,5,174
+Canada,Toronto,Noel,Quad,1,192
+Canada,Toronto,Noel,King,2,219
+Canada,Toronto,Noel,Studio,1,144
+Canada,Vancouver,Riviera,Single,3,129
+Canada,Vancouver,Riviera,Double,3,136
+Canada,Vancouver,Riviera,Quad,2,149
+Canada,Vancouver,Riviera,King,4,178
+Canada,Vancouver,Riviera,Studio,1,121
+Canada,Vancouver,Ramada,Single,4,119
+Canada,Vancouver,Ramada,Double,1,126
+Canada,Vancouver,Ramada,Quad,4,148
+Canada,Vancouver,Ramada,King,2,166
+Canada,Vancouver,Ramada,Studio,2,112
+Canada,Vancouver,Patricia,Single,6,126
+Canada,Vancouver,Patricia,Double,5,149
+Canada,Vancouver,Patricia,Quad,3,159
+Canada,Vancouver,Patricia,King,4,164
+Canada,Vancouver,Patricia,Studio,4,120
+Canada,Vancouver,Hampton Inn,Single,1,89
+Canada,Vancouver,Hampton Inn,Double,2,108
+Canada,Vancouver,Hampton Inn,Quad,1,116
+Canada,Vancouver,Hampton Inn,King,3,129
+Canada,Vancouver,Hampton Inn,Studio,4,99
+Canada,Vancouver,Pan Pacific,Single,1,118
+Canada,Vancouver,Pan Pacific,Double,2,129
+Canada,Vancouver,Pan Pacific,Quad,1,138
+Canada,Vancouver,Pan Pacific,King,2,159
+Canada,Vancouver,Pan Pacific,Studio,2,112
+Canada,Quebec City,Hotel Royal William,Single,1,129
+Canada,Quebec City,Hotel Royal William,Double,2,138
+Canada,Quebec City,Hotel Royal William,Quad,1,149
+Canada,Quebec City,Hotel Royal William,King,2,164
+Canada,Quebec City,Hotel Royal William,Studio,3,114
+Canada,Quebec City,Hotel Le Concorde,Single,3,128
+Canada,Quebec City,Hotel Le Concorde,Double,2，139
+Canada,Quebec City,Hotel Le Concorde,Quad,3，149
+Canada,Quebec City,Hotel Le Concorde,King,1，168
+Canada,Quebec City,Hotel Le Concorde,Studio,1，112
+Canada,Quebec City,Hotel Palace Royal,Single,3，107
+Canada,Quebec City,Hotel Palace Royal,Double,3，129
+Canada,Quebec City,Hotel Palace Royal,Quad,3，137
+Canada,Quebec City,Hotel Palace Royal,King,2，148
+Canada,Quebec City,Hotel Palace Royal,Studio,3，101
+Canada,Quebec City,Hotel Universal,Single,4，89
+Canada,Quebec City,Hotel Universal,Double,4，99
+Canada,Quebec City,Hotel Universal,Quad,3，106
+Canada,Quebec City,Hotel Universal,King,3，112
+Canada,Quebec City,Hotel Universal,Studio,3，75
+USA,New York,Double Tree,Single,4，159
+USA,New York,Double Tree,Double,1，179
+USA,New York,Double Tree,Quad,4，218
+USA,New York,Double Tree,King,3，289，
+USA,New York,Double Tree,Studio,5，149
+USA,New York,Courtyard,Single,3，149
+USA,New York,Courtyard,Double,2，159
+USA,New York,Courtyard,Quad,3，179
+USA,New York,Courtyard,King,6，189
+USA,New York,Courtyard,Studio,4，128
+USA,New York,Holiday Inn,Single,2，128
+USA,New York,Holiday Inn,Double,2，139
+USA,New York,Holiday Inn,Quad,2，145
+USA,New York,Holiday Inn,King,2，158
+USA,New York,Holiday Inn,Studio,3，112
+USA,New York,The Central Park,Single,2，179
+USA,New York,The Central Park,Double,1，199
+USA,New York,The Central Park,Quad,1，219
+USA,New York,The Central Park,King,1，249
+USA,New York,The Central Park,Studio,1，170
+USA,New York,Corwne Plaza,Single,6，156
+USA,New York,Corwne Plaza,Double,6，169
+USA,New York,Corwne Plaza,Quad,1，199
+USA,New York,Corwne Plaza,King,2，230
+USA,New York,Corwne Plaza,Studio,3，148
+USA,New York,Sheraton,Single,3，189
+USA,New York,Sheraton,Double,3，210
+USA,New York,Sheraton,Quad,2，239
+USA,New York,Sheraton,King,4，259
+USA,New York,Sheraton,Studio,1，179
