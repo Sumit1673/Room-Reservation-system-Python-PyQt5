@@ -1,4 +1,4 @@
-country,city,hotel_names,room_type,room_availability,Price(Per Room)
+country,city,hotel_names,room_type,room_availability
 Canada,Montreal,JW Marriott,Single,4,
 Canada,Montreal,JW Marriott,Double,1
 Canada,Montreal,JW Marriott,Quad,3
