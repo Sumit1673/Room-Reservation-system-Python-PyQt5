@@ -1,4 +1,4 @@
-country,city,hotel_names,room_type,room_availability,Price(Per Room Per Night)
+country,city,hotel_names,room_type,room_availability,prices
 Canada,Montreal,JW Marriott,Single,4,129
 Canada,Montreal,JW Marriott,Double,1,139
 Canada,Montreal,JW Marriott,Quad,3,144
@@ -85,47 +85,47 @@ Canada,Quebec City,Hotel Royal William,Quad,1,149
 Canada,Quebec City,Hotel Royal William,King,2,164
 Canada,Quebec City,Hotel Royal William,Studio,3,114
 Canada,Quebec City,Hotel Le Concorde,Single,3,128
-Canada,Quebec City,Hotel Le Concorde,Double,2，139
-Canada,Quebec City,Hotel Le Concorde,Quad,3，149
-Canada,Quebec City,Hotel Le Concorde,King,1，168
-Canada,Quebec City,Hotel Le Concorde,Studio,1，112
-Canada,Quebec City,Hotel Palace Royal,Single,3，107
-Canada,Quebec City,Hotel Palace Royal,Double,3，129
-Canada,Quebec City,Hotel Palace Royal,Quad,3，137
-Canada,Quebec City,Hotel Palace Royal,King,2，148
-Canada,Quebec City,Hotel Palace Royal,Studio,3，101
-Canada,Quebec City,Hotel Universal,Single,4，89
-Canada,Quebec City,Hotel Universal,Double,4，99
-Canada,Quebec City,Hotel Universal,Quad,3，106
-Canada,Quebec City,Hotel Universal,King,3，112
-Canada,Quebec City,Hotel Universal,Studio,3，75
-USA,New York,Double Tree,Single,4，159
-USA,New York,Double Tree,Double,1，179
-USA,New York,Double Tree,Quad,4，218
-USA,New York,Double Tree,King,3，289，
-USA,New York,Double Tree,Studio,5，149
-USA,New York,Courtyard,Single,3，149
-USA,New York,Courtyard,Double,2，159
-USA,New York,Courtyard,Quad,3，179
-USA,New York,Courtyard,King,6，189
-USA,New York,Courtyard,Studio,4，128
-USA,New York,Holiday Inn,Single,2，128
-USA,New York,Holiday Inn,Double,2，139
-USA,New York,Holiday Inn,Quad,2，145
-USA,New York,Holiday Inn,King,2，158
-USA,New York,Holiday Inn,Studio,3，112
-USA,New York,The Central Park,Single,2，179
-USA,New York,The Central Park,Double,1，199
-USA,New York,The Central Park,Quad,1，219
-USA,New York,The Central Park,King,1，249
-USA,New York,The Central Park,Studio,1，170
-USA,New York,Corwne Plaza,Single,6，156
-USA,New York,Corwne Plaza,Double,6，169
-USA,New York,Corwne Plaza,Quad,1，199
-USA,New York,Corwne Plaza,King,2，230
-USA,New York,Corwne Plaza,Studio,3，148
-USA,New York,Sheraton,Single,3，189
-USA,New York,Sheraton,Double,3，210
-USA,New York,Sheraton,Quad,2，239
-USA,New York,Sheraton,King,4，259
-USA,New York,Sheraton,Studio,1，179
+Canada,Quebec City,Hotel Le Concorde,Double,2，139,
+Canada,Quebec City,Hotel Le Concorde,Quad,3，149,
+Canada,Quebec City,Hotel Le Concorde,King,1，168,
+Canada,Quebec City,Hotel Le Concorde,Studio,1，112,
+Canada,Quebec City,Hotel Palace Royal,Single,3，107,
+Canada,Quebec City,Hotel Palace Royal,Double,3，129,
+Canada,Quebec City,Hotel Palace Royal,Quad,3，137,
+Canada,Quebec City,Hotel Palace Royal,King,2，148,
+Canada,Quebec City,Hotel Palace Royal,Studio,3，101,
+Canada,Quebec City,Hotel Universal,Single,4，89,
+Canada,Quebec City,Hotel Universal,Double,4，99,
+Canada,Quebec City,Hotel Universal,Quad,3，106,
+Canada,Quebec City,Hotel Universal,King,3，112,
+Canada,Quebec City,Hotel Universal,Studio,3，75,
+USA,New York,Double Tree,Single,4，159,
+USA,New York,Double Tree,Double,1，179,
+USA,New York,Double Tree,Quad,4，218,
+USA,New York,Double Tree,King,3，289，,
+USA,New York,Double Tree,Studio,5，149,
+USA,New York,Courtyard,Single,3，149,
+USA,New York,Courtyard,Double,2，159,
+USA,New York,Courtyard,Quad,3，179,
+USA,New York,Courtyard,King,6，189,
+USA,New York,Courtyard,Studio,4，128,
+USA,New York,Holiday Inn,Single,2，128,
+USA,New York,Holiday Inn,Double,2，139,
+USA,New York,Holiday Inn,Quad,2，145,
+USA,New York,Holiday Inn,King,2，158,
+USA,New York,Holiday Inn,Studio,3，112,
+USA,New York,The Central Park,Single,2，179,
+USA,New York,The Central Park,Double,1，199,
+USA,New York,The Central Park,Quad,1，219,
+USA,New York,The Central Park,King,1，249,
+USA,New York,The Central Park,Studio,1，170,
+USA,New York,Corwne Plaza,Single,6，156,
+USA,New York,Corwne Plaza,Double,6，169,
+USA,New York,Corwne Plaza,Quad,1，199,
+USA,New York,Corwne Plaza,King,2，230,
+USA,New York,Corwne Plaza,Studio,3，148,
+USA,New York,Sheraton,Single,3，189,
+USA,New York,Sheraton,Double,3，210,
+USA,New York,Sheraton,Quad,2，239,
+USA,New York,Sheraton,King,4，259,
+USA,New York,Sheraton,Studio,1，179,

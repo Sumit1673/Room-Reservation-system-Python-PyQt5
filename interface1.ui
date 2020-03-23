@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>669</width>
+    <width>698</width>
     <height>609</height>
    </rect>
   </property>
@@ -474,7 +474,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QDateEdit" name="date_edit_check_in_2">
+             <widget class="QDateEdit" name="date_edit_check_out">
               <property name="date">
                <date>
                 <year>2020</year>
@@ -548,7 +548,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="roomnumber_spinbox"/>
+         <widget class="QSpinBox" name="spn_box_rooms"/>
         </item>
         <item>
          <spacer name="horizontalSpacer_2">
@@ -576,7 +576,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="adults_spinbox"/>
+         <widget class="QSpinBox" name="spn_box_adults"/>
         </item>
         <item>
          <spacer name="horizontalSpacer_3">
@@ -687,7 +687,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>669</width>
+     <width>698</width>
      <height>20</height>
     </rect>
    </property>

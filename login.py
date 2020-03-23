@@ -208,7 +208,7 @@ class Login(QMainWindow):
 
     def get_login_details(self):
         username = str(self.line_edit_username.text())
-        password  = str(self.line_edit_pswd.text())
+        password = str(self.line_edit_pswd.text())
         return [username, password]
 
     def check_user_type(self):
