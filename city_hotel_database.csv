@@ -1,9 +1,9 @@
 country,city,hotel_names,room_type,room_availability,prices
-Canada,Montreal,JW Marriott,Single,4,129
-Canada,Montreal,JW Marriott,Double,1,139
-Canada,Montreal,JW Marriott,Quad,3,144
-Canada,Montreal,JW Marriott,King,4,159
-Canada,Montreal,JW Marriott,Studio,3,119
+Canada,Montreal,JW Marriot,Single,4,129
+Canada,Montreal,JW Marriot,Double,1,139
+Canada,Montreal,JW Marriot,Quad,3,144
+Canada,Montreal,JW Marriot,King,4,159
+Canada,Montreal,JW Marriot,Studio,3,119
 Canada,Montreal,Jameson,Single,5,89
 Canada,Montreal,Jameson,Double,0,99
 Canada,Montreal,Jameson,Quad,1,108

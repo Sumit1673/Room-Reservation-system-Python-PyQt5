@@ -19,7 +19,8 @@ class Controller:
         self.booking_page.check_in_date_sig.connect(self.booking_page.set_date)
         self.booking_page.check_in_date_sig.connect(self.booking_page.verify_checkout_date)
         self.booking_page.room_type_sig.connect(self.booking_page.set_adults_with_room_type)
-
+        self.booking_page.city_changed_sig.connect(self.booking_page.display_hotel)
+        self.booking_page.city_changed_sig.connect(self.booking_page.display_room_type)
         # Switch to display hotels
         self.booking_page.ui.view_availability.clicked.connect(self.display_hotels)
         self.booking_page.availability_pb_sign.connect(self.show_hotels)
@@ -63,16 +64,17 @@ class Controller:
         self.booking_page.availability_pb_sign.emit()
 
     def show_hotels(self):
-        # self.booking_page.setDisabled(True)
+        self.booking_page.showMinimized()
         country = self.booking_page.get_country()
         city = self.booking_page.get_city()
         if city and country is not None:            
             self.select_hotel = HotelDisplay(country, city)
+            self.select_hotel.close_window_sig.connect(lambda: self.go_back_to_previous_window("display_hotel_win"))
             availability_count, availability_df = self.get_hotel_availability()
             # displaying the images based on count
             # availability_df gives information on whats required. As it contains the filtered
             # data based on user selection.
-            self.select_hotel.display_hotels(availability_count, availability_df)
+            user_hotel_confirm = self.select_hotel.display_hotels(availability_count, availability_df)
             self.select_hotel.show()
         else:
             self.booking_page.display_msg("User Input", "Select a country and a city")
@@ -102,6 +104,14 @@ class Controller:
                           'hotel_name': self.booking_page.get_hotel_name(),
                           'room_type': self.booking_page.get_room_type()}
         return user_selection
+
+    def show_confirmation_page(self):
+        pass
+
+    def go_back_to_previous_window(self, sender):
+        if sender == 'display_hotel_win':
+            print("previous window")
+            self.booking_page.show()
 
 
 def main():
