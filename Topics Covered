@@ -1,0 +1,94 @@
+-using star syntax to store unwanted info from the list.
+-deque from collection. --> for storing only recent values and deleting the old values after a certain limit.
+-heapq --> to obtain nlargest and nSmallest list of numbers.
+       --> changes the inp to list --> sort --> gives values
+-Use set when you need to avoid the duplicate items, use list when you want to follow insertion order.
+-single key multi-value dict--> from collections import defaultdict
+    d = defaultdict(list) or d = defaultdict(set)
+    d = defaultdict(list)
+    for key, value in pairs:
+        d[key].append(value)
+- using zip to perform operation on the dict min(zip(prices.values(), prices.keys()))
+    # min_price is (10.75, 'FB')
+-You can get the key corresponding to the min or max value if you supply a key function
+ to min() and max(). For example:
+     min(prices, key=lambda k: prices[k]) # Returns 'FB'
+     max(prices, key=lambda k: prices[k]) # Returns 'AAPL'
+ However, to get the minimum value, you’ll need to perform an extra lookup step. For
+ example:
+ min_value = prices[min(prices, key=lambda k: prices[k])]
+- To maintain the order in a list after removing the duplicates: use yield
+- Most occuring elements: import collections.Counter
+
+-Sorting a structure based on Keys: use from operator import itemgetter
+rows = [
+            {'fname': 'Brian', 'lname': 'Jones', 'uid': 1003},
+            {'fname': 'David', 'lname': 'Beazley', 'uid': 1002},
+            {'fname': 'John', 'lname': 'Cleese', 'uid': 1001},
+            {'fname': 'Big', 'lname': 'Jones', 'uid': 1004}
+        ]
+from operator import itemgetter
+rows_by_fname = sorted(rows, key=itemgetter('lname','fname'))
+- to accept only keywork arguments: def fun(something, *, something_else)
+        - Here all the arguments after * will have to be passed in
+        'varible_name=its_Value'
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+--------------------------THREADS-------------------------------------------
+----------------------------------------------------------------------------
+from threading import Thread
+1. create a thread using Thread, make demon=True for long running threads.
+2. start the thread
+3. Join.
+- No in built function to terminate. Create an indirect way to terminate.
+    - class CountdownTask:
+        def __init__(self):
+            self._running = True
+        def terminate(self):
+            self._running = False
+        def run(self, n):
+            while self._running and n > 0:
+                print('T-minus', n)
+                n -= 1
+                time.sleep(5)
+------------------------------------------------------------------
+-----------------------Object oriented Programming----------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+Python Data Model:
+    Study dunder functions:
+    Metaclasses: Python oriemted data Model
+        -Decorators, Generators and context managers
+
+        -If importing any method from the base class and later point of time that
+        method might be removed from the base class for some reason. Then what to
+        do to prevent the derived class invoking that method and end up in fatal
+        error states;
+            before invoking the base class into the derived class you this:
+                assert hasassertt(base, 'method_name'), "some msg"
+
+                class Derived(base):
+                    def boo(self):
+                        return baseclass_method()
+        - How to prevent the derived class using the method implemeted in the
+            base in a wrong way before hitting into the production. If anything is
+            wrongly used will have its effect only during the run time. To prevent
+            such things befor runtime lets look example later to clarify above things:
+
+            -1. Meta class
+                class BaseMeta(type):
+                    def __new__(cls,name,bases,body):
+                        if not 'bar' in body:
+                            raise TypeError"bad user class"
+                        return super().__new__(cls,name,bases, body)
+
+                class Base(metaclass=BaseMeta):
+                    def foo(self):
+                        return self.bar()
+
+            -2. __init__subclass
+
+        -Decorators:
+
+        -Generators:
+ 
