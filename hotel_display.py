@@ -1,6 +1,8 @@
+
 import os
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QMessageBox
 
 IMAGE_FOLDER = "./images"
 
@@ -56,11 +58,79 @@ class HotelDisplay(QtWidgets.QMainWindow):
         self.frame_label.setFont(QtGui.QFont("Times", 15, QtGui.QFont.Bold))
         self.frame_label.setText("Showing results")
         self._vlay.addWidget(self.frame)
+        self.push = QtWidgets.QPushButton(self.content_widget)
+        self.push.setMinimumWidth(700)
+        self.push.setMinimumHeight(50)
+        self.push.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        self.push.setStyleSheet("QFrame {background-color: #005500}")
+        self.push.setFont(QtGui.QFont("Times", 15, QtGui.QFont.Bold))
+        self.push.setText("Click for filtering options")
+        self._vlay.addWidget(self.push)
         self.img_count = 0
         self._timer = QtCore.QTimer(self, interval=1)
         self._timer.timeout.connect(self.on_timeout)
         self._timer.start()
         self.files_it = iter([])
+
+        self.push.clicked.connect(self.show_popup)
+
+    def show_popup(self):
+        self.setWindowTitle('Filtering Options')
+        self.scrollArea = QtWidgets.QScrollArea(widgetResizable=True)
+        self.setCentralWidget(self.scrollArea)
+        self.content_widget = QtWidgets.QWidget()
+        self.scrollArea.setWidget(self.content_widget)
+        self._vlay = QtWidgets.QVBoxLayout(self.content_widget)
+        self.frame = QtWidgets.QFrame(self.content_widget)
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setLineWidth(1)
+        self.frame.setMinimumWidth(700)
+        self.frame.setMinimumHeight(50)
+        self.frame.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        self.frame.setStyleSheet("QFrame {background-color: #005500}")
+        self.frame_label = QtWidgets.QLabel(self.frame)
+        self.frame_label.setMinimumHeight(20)
+        self.frame_label.setMinimumWidth(100)
+        self.frame_label.setStyleSheet("QLabel {color: white}")
+        self.frame_label.setFont(QtGui.QFont("Times", 15, QtGui.QFont.Bold))
+        self.frame_label.setText("Choose one of the filtering options")
+        self.push = QtWidgets.QPushButton(self.content_widget)
+        self.push.setMinimumWidth(700)
+        self.push.setMinimumHeight(50)
+        self.push.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        self.push.setStyleSheet("QFrame {background-color: #005500}")
+        self.push.setFont(QtGui.QFont("Times", 15, QtGui.QFont.Bold))
+        self.push.setText("Transportation")
+        self._vlay.addWidget(self.push)
+        self.push1 = QtWidgets.QPushButton(self.content_widget)
+        self.push1.setMinimumWidth(700)
+        self.push1.setMinimumHeight(50)
+        self.push1.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        self.push1.setStyleSheet("QFrame {background-color: #005500}")
+        self.push1.setFont(QtGui.QFont("Times", 15, QtGui.QFont.Bold))
+        self.push1.setText("Distance from downtown")
+        self._vlay.addWidget(self.push1)
+        self.push2 = QtWidgets.QPushButton(self.content_widget)
+        self.push2.setMinimumWidth(700)
+        self.push2.setMinimumHeight(50)
+        self.push2.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        self.push2.setStyleSheet("QFrame {background-color: #005500}")
+        self.push2.setFont(QtGui.QFont("Times", 15, QtGui.QFont.Bold))
+        self.push2.setText("Pricing")
+        self._vlay.addWidget(self.push2)
+        self.push3 = QtWidgets.QPushButton(self.content_widget)
+        self.push3.setMinimumWidth(700)
+        self.push3.setMinimumHeight(50)
+        self.push3.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        self.push3.setStyleSheet("QFrame {background-color: #005500}")
+        self.push3.setFont(QtGui.QFont("Times", 15, QtGui.QFont.Bold))
+        self.push3.setText("Kids friendly")
+        self._vlay.addWidget(self.push3)
+
+
+
+
+
 
     def closeEvent(self, event: QtGui.QCloseEvent) -> None:
         self.close_window_sig.emit()
@@ -198,6 +268,6 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     w = HotelDisplay("Canada", "Montreal")
     rooms = {'single': 200, 'double': 400, 'family': 600}
-    # w._display_content(rooms)
+    #w._display_content()
     w.show()
     sys.exit(app.exec_())
