@@ -1,11 +1,11 @@
-country,city,hotel_names,room_type,check_in,check_out,rooms_booked,booking_amount
-canada,Montreal,Radisson,single,2020-02-13,2020-02-23,2,20
-canada,Montreal,JW Marriott,double,2020-02-13,2020-02-23,3,30
-canada,Toronto,JW Marriott,double,2020-02-25,,1,50
-canada,Toronto,ITC,single,2020-02-13,2020-02-13,2,220
-canada,Montreal,JW Marriott,single,2020-02-25,2020-02-26,2,12
-canada,Toronto,The Manor,family,2020-03-01,2020-03-01,2,45
-canada,Montreal,JW Marriott,double,2020-02-29,2020-02-30,4,89
-canada,Montreal,Jameson,single,2020-02-29,2020-03-01,1,40
-canada,Toronto,Jameson,family,2020-02-13,2020-02-23,1,123
-,,,,,                                                                                                                                                                                                                                                                                                                                                                                                                                     ,,
+country,city,hotel_names,room_type,check_in,check_out,rooms_booked,booking_amount,username
+canada,Montreal,Radisson,single,2020-02-13,2020-02-23,2,20,
+canada,Montreal,JW Marriott,double,2020-02-13,2020-02-23,3,30,
+canada,Toronto,JW Marriott,double,2020-02-25,,1,50,
+canada,Toronto,ITC,single,2020-02-13,2020-02-13,2,220,
+canada,Montreal,JW Marriott,single,2020-02-25,2020-02-26,2,12,
+canada,Toronto,The Manor,family,2020-03-01,2020-03-01,2,45,
+canada,Montreal,JW Marriott,double,2020-02-29,2020-02-30,4,89,
+canada,Montreal,Jameson,single,2020-02-29,2020-03-01,1,40,
+canada,Toronto,Jameson,family,2020-02-13,2020-02-23,1,123,
+,,,,,                                                                                                                                                                                                                                                                                                                                                                                                                                     ,,,

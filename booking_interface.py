@@ -71,13 +71,13 @@ class BookingPage(QMainWindow):
         return self.ui.ledit_country.text()
 
     def get_n_adults(self):
-        return self.ui.spn_box_adults.Value()
+        return self.ui.spn_box_adults.value()
 
     def get_room_type(self):
         return self.ui.cmbox_room_type.currentText()
 
     def get_rooms(self):
-        return self.ui.spn_box_rooms.Value()
+        return self.ui.spn_box_rooms.value()
 
     def set_adults_with_room_type(self):
         room_type = self.ui.cmbox_room_type.currentText().lower()

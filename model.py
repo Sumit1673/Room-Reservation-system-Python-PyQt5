@@ -2,7 +2,7 @@
 based on the user query"""
 import pandas as pd
 import os
-
+import csv
 
 class DataBase:
     def __init__(self):
@@ -21,8 +21,15 @@ class DataBase:
         data_frame = data_frame.dropna(axis=0, subset=missing_cols)
         return data_frame
 
-    def save_booking(self):
-        pass
+    def save_booking(self, booking_id, country, username, _in, out, total_price, n_rooms, user_final_booking):
+        city = user_final_booking[1]
+        room_type = user_final_booking[3].text()
+        log = [country, city, user_final_booking[0], room_type,
+               _in, out, n_rooms, total_price, username]
+        with open("user_booking_log.csv", 'a', newline="") as log_file:
+            log_writer = csv.writer(log_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            log_writer.writerow(log)
+
 
     def find_hotels_booked(self, check_in, check_out, city, country=None, room_type=None, hotel_name=None):
         """
