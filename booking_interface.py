@@ -56,6 +56,7 @@ class BookingPage(QMainWindow):
         self.ui.cal_check_out.clicked.connect(self.check_in_date_sig)
         self.ui.cmbox_room_type.currentIndexChanged.connect(self.room_type_sig)
         self.ui.ledit_city_name.textChanged.connect(self.emit_text_change_sig)
+        self.ui.ledit_hotel.textChanged.connect(self.display_room_type)
 
     def emit_text_change_sig(self):
         self.ui.ledit_hotel.setText("")
