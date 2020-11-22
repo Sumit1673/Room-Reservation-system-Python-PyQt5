@@ -13,5 +13,8 @@ Initially to test the application the
 2. PyQt5
 
 # How application looks:
+![Login](https://github.com/Sumit1673/Room-Reservation-system-Python-PyQt5/blob/master/chillo_login.PNG)
+![Booking Interface](https://github.com/Sumit1673/Room-Reservation-system-Python-PyQt5/blob/master/chillobookinginterface.PNG)
+![Hotel Database](https://github.com/Sumit1673/Room-Reservation-system-Python-PyQt5/blob/master/city_hotel_database.csv)
 ![Hotel Search Images](https://github.com/Sumit1673/Room-Reservation-system-Python-PyQt5/blob/master/chillo_hoteldisplay.PNG?raw=true)
 
