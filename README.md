@@ -12,4 +12,6 @@ Initially to test the application the
 1. Python 3.7
 2. PyQt5
 
+# How application looks:
+![Hotel Search Images](https://github.com/Sumit1673/Room-Reservation-system-Python-PyQt5/blob/master/chillo_hoteldisplay.PNG?raw=true)
 
